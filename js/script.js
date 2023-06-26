@@ -43,7 +43,7 @@ for(let index = 0; index < membersTeam.length; index++){
 
 
 // STAMPA SUL DOM: MILESTONE 2
-const cardsTeam = document.querySelectorAll(".the-team .member");
+const cardsTeam = document.querySelectorAll(".the-team");
 
 for (let index = 0; index < cardsTeam.length; index++) {
     const member = membersTeam[index];
