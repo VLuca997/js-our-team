@@ -43,13 +43,14 @@ for(let index = 0; index < membersTeam.length; index++){
 
 
 // STAMPA SUL DOM: MILESTONE 2
-const cardsTeam = document.getElementsByClassName("the-team");
-for(let index = 0; index < cardsTeam.length; index++){
+const cardsTeam = document.querySelectorAll(".the-team .member");
+
+for (let index = 0; index < cardsTeam.length; index++) {
     const member = membersTeam[index];
     const card = cardsTeam[index];
-    const nameElement = card.getElementsByClassName("name")[0];
-    const roleElement = card.getElementsByClassName("role")[0];
-    const photoElement = card.getElementsByTagName("img")[0];
+    const nameElement = card.querySelector(".name");
+    const roleElement = card.querySelector(".role");
+    const photoElement = card.querySelector("img");
 
     nameElement.textContent = member.name;
     roleElement.textContent = member.role;
