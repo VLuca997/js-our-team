@@ -1,4 +1,4 @@
-//Array di oggetti:
+//Array di oggetti: MILESTONE 0
 
 const membersTeam = [
     {
@@ -32,3 +32,11 @@ const membersTeam = [
         photo: "barbara-ramos-graphic-designer.jpg",
     },
 ];
+// STAMPA IN CONSOLE: MILESTONE 1
+for(let index = 0; index < membersTeam.length; index++){
+    const member = membersTeam[index];
+    console.log(`Nome: ${member.name}`);
+    console.log(`Ruolo: ${member.position}`);
+    console.log(`Foto: ${member.photo}`);
+    console.log("------------------------");
+}
