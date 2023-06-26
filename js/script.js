@@ -3,32 +3,32 @@
 const membersTeam = [
     {
         name: "Wayne Bernett",
-        position: "Founder & CEO",
+        role: "Founder & CEO",
         photo: "wayne-barnett-founder-ceo.jpg",
     },
     {
         name: "Angela Caroll",
-        position: "Chief Editor",
+        role: "Chief Editor",
         photo: "angela-caroll-chief-editor.jpg",
     },
     {
         name: "Walter Gordon",
-        position: "Office Manager",
+        role: "Office Manager",
         photo: "walter-gordon-office-manager.jpg",
     },
     {
         name: "Angela Lopez",
-        position: "Social Media Manager",
+        role: "Social Media Manager",
         photo: "angela-lopez-social-media-manager.jpg",
     },
     {
         name: "Scott Estrada",
-        position: "Developer",
+        role: "Developer",
         photo: "scott-estrada-developer.jpg",
     },
     {
         name: "Barbara Ramos",
-        position: "Graphic Designer",
+        role: "Graphic Designer",
         photo: "barbara-ramos-graphic-designer.jpg",
     },
 ];
@@ -36,7 +36,22 @@ const membersTeam = [
 for(let index = 0; index < membersTeam.length; index++){
     const member = membersTeam[index];
     console.log(`Nome: ${member.name}`);
-    console.log(`Ruolo: ${member.position}`);
+    console.log(`Ruolo: ${member.role}`);
     console.log(`Foto: ${member.photo}`);
     console.log("------------------------");
+};
+
+
+// STAMPA SUL DOM: MILESTONE 2
+const cardsTeam = document.getElementsByClassName("the-team");
+for(let index = 0; index < cardsTeam.length; index++){
+    const member = membersTeam[index];
+    const card = cardsTeam[index];
+    const nameElement = card.getElementsByClassName("name")[0];
+    const roleElement = card.getElementsByClassName("role")[0];
+    const photoElement = card.getElementsByTagName("img")[0];
+
+    nameElement.textContent = member.name;
+    roleElement.textContent = member.role;
+    photoElement.src = member.photo;
 }
